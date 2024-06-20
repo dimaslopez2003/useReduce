@@ -6,9 +6,9 @@ const initialState = { count: 0 };
 function reducer (state: { count: number }, action: { type: string }){
     
   switch (action.type) {
-    case 'increment':
+    case 'incrementar':
       return { count: state.count + 1 };
-    case 'decrement':
+    case 'decrementar':
       return { count: state.count - 1 };
     default:
         case 'reset':
@@ -26,10 +26,10 @@ const Counter: React.FC = () => {
         Count: {state.count}
       </Typography>
       <Box>
-        <Button variant="contained" color="primary" onClick={() => dispatch({ type: 'increment' })}>
+        <Button variant="contained" color="primary" onClick={() => dispatch({ type: 'incrementar' })}>
           +
         </Button>
-        <Button variant="contained" color="secondary" onClick={() => dispatch({ type: 'decrement' })}>
+        <Button variant="contained" color="secondary" onClick={() => dispatch({ type: 'decrementar' })}>
           -
         </Button>
         <Button variant="contained" onClick={() => dispatch({ type: 'reset' })}>
